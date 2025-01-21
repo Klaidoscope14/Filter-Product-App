@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Filter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: #fff;
+            text-align: center;
+        }
+        .filter-container {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            display: inline-block;
+        }
+        .search-container {
+            margin-bottom: 10px;
+        }
+        input {
+            padding: 10px;
+            width: 250px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .category-container {
+            margin-bottom: 20px;
+        }
+        .category-btn {
+            margin: 5px;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            transition: 0.3s;
+        }
+        .category-btn:hover, .category-btn.active {
+            background-color: #218838;
+        }
+        #product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .product-item {
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 220px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .product-item:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="filter-container">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search" />
+            <button id="search-btn">Search</button>
+        </div>
+        <div class="category-container">
+            <button class="category-btn active" data-category="all">All Products</button>
+            <button class="category-btn" data-category="electronics">Electronics</button>
+            <button class="category-btn" data-category="T-shirt">Clothing</button>
+            <button class="category-btn" data-category="Coffee-maker">Home & Garden</button>
+        </div>
+    </div>
+    <div id="product-list">
+        <div class="product-item" data-category="electronics">
+            <h3>Smartphone</h3>
+            <p>Latest smartphone models</p>
+        </div>
+        <div class="product-item" data-category="T-shirt">
+            <h3>T-shirt</h3>
+            <p>Casual and stylish T-shirts</p>
+        </div>
+        <div class="product-item" data-category="Coffee-maker">
+            <h3>Coffee Maker</h3>
+            <p>Make coffee effortlessly</p>
+        </div>
+        <div class="product-item" data-category="electronics">
+            <h3>Laptop</h3>
+            <p>High-performance laptops</p>
+        </div>
+        <div class="product-item" data-category="T-shirt">
+            <h3>Hoodie</h3>
+            <p>Warm and comfortable hoodies</p>
+        </div>
+    </div>
+    <script src = 'Filter-Product.js'></script>
+</body>
+</html>
